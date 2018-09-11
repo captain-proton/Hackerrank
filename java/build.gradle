@@ -1,0 +1,13 @@
+allprojects {
+    task hello << { task -> println "$task.project.name"}
+}
+
+subprojects {
+    apply plugin: "java"
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+}
